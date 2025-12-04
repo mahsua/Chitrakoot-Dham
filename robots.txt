@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chitrakoot.mahsua.com/sitemap.xml
