@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support This Chitrakoot Dham Website – Donate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+        content="Support this free, open-source Chitrakoot Dham information website maintained by Mahsua Technology. Your donation helps cover server costs and future spiritual projects." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <style>
+    .donate-shell {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+      overflow: hidden;
+      border: 1px solid rgba(255,122,0,0.18);
+    }
+
+    .donate-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+    }
+
+    .donate-text {
+      padding: 28px 26px;
+      background: radial-gradient(circle at top left, #FFF7ED 0, #FFFFFF 55%, #FFF5F7 100%);
+    }
+
+    .donate-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      color: #FF7A00;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .donate-title {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .donate-text p {
+      font-size: 0.96rem;
+      color: #4B5563;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .donate-highlight {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      margin-top: 10px;
+      background: #FEF3C7;
+      border-radius: 12px;
+      border: 1px solid #FBBF24;
+      font-size: 0.9rem;
+      color: #92400E;
+      font-weight: 500;
+    }
+
+    .donate-highlight-icon {
+      font-size: 1.3rem;
+    }
+
+    .donate-qr-side {
+      position: relative;
+      background: linear-gradient(135deg,#FF7A00,#FF3366);
+      padding: 26px 20px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .donate-qr-side::before,
+    .donate-qr-side::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      z-index: 0;
+    }
+
+    .donate-qr-side::before {
+      width: 180px;
+      height: 180px;
+      top: -50px;
+      right: -40px;
+    }
+    .donate-qr-side::after {
+      width: 200px;
+      height: 200px;
+      bottom: -60px;
+      left: -60px;
+    }
+
+    .donate-qr-card {
+      position: relative;
+      z-index: 1;
+      background:#ffffff;
+      border-radius: 18px;
+      padding: 14px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+      margin-bottom: 14px;
+      transform: translateY(0);
+      transition: transform .25s ease;
+    }
+
+    .donate-qr-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .donate-qr-card img {
+      width: 230px;
+      height: 230px;
+      object-fit: contain;
+      border-radius: 12px;
+      display:block;
+    }
+
+    .donate-qr-side h2 {
+      position: relative;
+      z-index: 1;
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .donate-qr-side p {
+      position: relative;
+      z-index: 1;
+      font-size: 0.96rem;
+      margin-bottom: 10px;
+      color: #FFE4CF;
+    }
+
+    .donate-note {
+      position: relative;
+      z-index: 1;
+      font-size: 0.8rem;
+      text-align: center;
+      max-width: 260px;
+      color: #FFE4CF;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .donate-layout {
+        grid-template-columns: 1fr;
+      }
+      .donate-text {
+        padding: 22px 18px;
+      }
+      .donate-qr-side {
+        padding: 22px 18px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <!-- Brand -->
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">ॐ</div>
+      <div class="brand-text">
+        <span class="brand-title">Chitrakoot Dham</span>
+        <span class="brand-subtitle">Where Divinity and Nature Meet</span>
+      </div>
+    </a>
+
+    <!-- Hamburger for mobile -->
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" onclick="toggleMenu()">
+      <span class="chevron"></span>
+    </button>
+
+    <!-- Main navigation -->
+    <nav class="main-nav">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#history">History</a>
+      <a href="../index.html#attractions">Attractions</a>
+      <a href="../index.html#plan-visit">Plan Visit</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="donate.html" class="btn-nav">❤ Donate</a>
+    </nav>
+
+    <!-- Language toggle -->
+    <div class="lang-toggle">
+      <button class="lang-btn lang-en active" type="button" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn lang-hi inactive" type="button" onclick="setLanguage('hi')">हिन्दी</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <div class="breadcrumb-left">
+        <a href="../index.html" id="crumb-home">Home</a>
+        <span>›</span>
+        <span id="crumb-page">Donate</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="section-inner">
+        <h2 id="donate-heading">Support This Free Chitrakoot Dham Website</h2>
+
+        <div class="donate-shell fade-in">
+          <div class="donate-layout">
+
+            <!-- LEFT: TEXT -->
+            <div class="donate-text">
+              <div class="donate-tag" id="donate-tag">Mahsua Technology Initiative</div>
+              <h3 class="donate-title" id="donate-title">
+                Help Us Keep This Sacred Guide Free for Everyone
+              </h3>
+
+              <p id="donate-p1">
+                Namaste! I am <strong>Shivam Kushwaha</strong>, Founder of Mahsua Technology.
+              </p>
+              <p id="donate-p2">
+                This Chitrakoot Dham website is developed by us as a <strong>free public service</strong>,
+                so that pilgrims and travelers can easily get authentic information about Ram Ghat, Kamadgiri,
+                Gupt Godavari, Hanuman Dhara, Sati Anusuya Ashram and other sacred places.
+              </p>
+              <p id="donate-p3">
+                If this effort has helped you in any way, you can support us with a voluntary contribution.
+                Your support will help us maintain servers, improve content and build more such spiritual and
+                social projects in the future.
+              </p>
+
+              <div class="donate-highlight">
+                <span class="donate-highlight-icon">✅</span>
+                <span id="donate-highlight-text">
+                  Secure, direct support via UPI / QR Code. No extra gateway charges.
+                </span>
+              </div>
+            </div>
+
+            <!-- RIGHT: QR -->
+            <div class="donate-qr-side">
+              <div class="donate-qr-card">
+                <img src="../assets/images/g-pay.jpg"
+                     alt="Donate to Mahsua Technology via UPI QR"
+                     onerror="this.src='https://placehold.co/300x300/ffffff/000000?text=Scan+QR+Code';" />
+              </div>
+              <h2 id="donate-qr-heading">Scan & Support</h2>
+              <p id="donate-qr-subtext">Mahsua Technology · Chitrakoot Digital Seva</p>
+
+              <div class="donate-note" id="donate-note">
+                Your contribution will be used mainly for server costs, domain renewals and building
+                more free, open-source digital projects for temples, villages and students.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-links">
+        <a href="disclaimer.html">
+          <span class="footer-icon">⚖️</span>
+          <span id="footer-disclaimer">Disclaimer</span>
+        </a>
+        <span class="footer-sep">|</span>
+        <a href="donate.html">
+          <span class="footer-icon">💝</span>
+          <span id="footer-donate">Donate</span>
+        </a>
+      </div>
+
+      <div class="footer-meta">
+        <span class="footer-icon">💻</span>
+        <span id="footer-dev-text">
+          Developed by <a href="https://technology.mahsua.com" target="_blank" rel="noopener">Mahsua Technology</a>
+          with ❤️ from India (Free and Open-Source)
+        </span>
+      </div>
+
+      <div class="footer-copy">
+        <span id="footer-copy">© 2025 Chitrakoot Dham • Designed with devotion</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // MOBILE NAV TOGGLE
+    function toggleMenu() {
+      const nav = document.querySelector('.main-nav');
+      const menuBtn = document.querySelector('.menu-toggle');
+
+      nav.classList.toggle('open');
+      menuBtn.classList.toggle('open');
+    }
+
+    const translations = {
+      en: {
+        'crumb-home': 'Home',
+        'crumb-page': 'Donate',
+
+        'donate-heading': 'Support This Free Chitrakoot Dham Website',
+        'donate-tag': 'Mahsua Technology Initiative',
+        'donate-title': 'Help Us Keep This Sacred Guide Free for Everyone',
+        'donate-p1': 'Namaste! I am Shivam Kushwaha, Founder of Mahsua Technology.',
+        'donate-p2': 'This Chitrakoot Dham website is developed by us as a free public service, so that pilgrims and travelers can easily get authentic information about Ram Ghat, Kamadgiri, Gupt Godavari, Hanuman Dhara, Sati Anusuya Ashram and other sacred places.',
+        'donate-p3': 'If this effort has helped you in any way, you can support us with a voluntary contribution. Your support will help us maintain servers, improve content and build more such spiritual and social projects in the future.',
+        'donate-highlight-text': 'Secure, direct support via UPI / QR Code. No extra gateway charges.',
+        'donate-qr-heading': 'Scan & Support',
+        'donate-qr-subtext': 'Mahsua Technology · Chitrakoot Digital Seva',
+        'donate-note': 'Your contribution will be used mainly for server costs, domain renewals and building more free, open-source digital projects for temples, villages and students.',
+
+        // FOOTER
+        'footer-disclaimer': 'Disclaimer',
+        'footer-donate': 'Donate',
+        'footer-dev-text': 'Developed by Mahsua Technology with ❤️ from India (Free and Open-Source)',
+        'footer-copy': '© 2025 Chitrakoot Dham • Designed with devotion'
+      },
+
+      hi: {
+        'crumb-home': 'मुखपृष्ठ',
+        'crumb-page': 'सहयोग करें',
+
+        'donate-heading': 'इस निःशुल्क चित्रकूट धाम वेबसाइट का सहयोग करें',
+        'donate-tag': 'Mahsua Technology Initiative',
+        'donate-title': 'आइए, इस पावन डिजिटल गाइड को सभी के लिए निःशुल्क बनाए रखें',
+        'donate-p1': 'नमस्कार! मैं <strong>शिवम कुशवाहा</strong> हूँ, Mahsua Technology का संस्थापक।',
+        'donate-p2': 'यह चित्रकूट धाम वेबसाइट हमने एक <strong>मुफ़्त सार्वजनिक सेवा</strong> के रूप में विकसित की है, ताकि श्रद्धालुओं और यात्रियों को राम घाट, कामदगिरि, गुप्त गोदावरी, हनुमान धारा, सती अनुसूया आश्रम और अन्य पावन स्थलों की सही और सरल जानकारी मिल सके।',
+        'donate-p3': 'यदि यह प्रयास आपको किसी भी रूप में उपयोगी लगा हो, तो आप स्वेच्छा से हमें सहयोग राशि दे सकते हैं। आपका छोटा–सा सहयोग सर्वर ख़र्च, डोमेन नवीनीकरण और भविष्य के ऐसे ही आध्यात्मिक व सामाजिक डिजिटल प्रोजेक्ट्स के विकास में बहुत सहायक होगा।',
+        'donate-highlight-text': 'UPI / QR कोड के माध्यम से सुरक्षित और सीधा सहयोग – किसी अतिरिक्त शुल्क के बिना।',
+        'donate-qr-heading': 'स्कैन करें और सहयोग दें',
+        'donate-qr-subtext': 'Mahsua Technology · Chitrakoot Digital Seva',
+        'donate-note': 'आपके सहयोग का उपयोग मुख्य रूप से सर्वर लागत, डोमेन नवीनीकरण और मंदिरों, गाँवों व विद्यार्थियों के लिए नए निःशुल्क, मुक्त स्रोत डिजिटल प्रोजेक्ट्स बनाने में किया जाएगा।',
+
+        // FOOTER - HINDI
+        'footer-disclaimer': 'अस्वीकरण',
+        'footer-donate': 'दान',
+        'footer-dev-text': 'विकसित: Mahsua Technology द्वारा, भारत से ❤️ (निःशुल्क और मुक्त स्रोत)',
+        'footer-copy': '© 2025 चित्रकूट धाम • श्रद्धा के साथ निर्मित'
+      }
+    };
+
+    function setLanguage(lang) {
+      const set = translations[lang];
+      if (!set) return;
+
+      Object.keys(set).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = set[id]; // use innerHTML to allow <strong> in Hindi text
+      });
+
+      document.documentElement.lang = (lang === 'hi') ? 'hi' : 'en';
+
+      document.querySelector('.lang-en').classList.toggle('active', lang === 'en');
+      document.querySelector('.lang-en').classList.toggle('inactive', lang !== 'en');
+      document.querySelector('.lang-hi').classList.toggle('active', lang === 'hi');
+      document.querySelector('.lang-hi').classList.toggle('inactive', lang !== 'en');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage('en');
+    });
+  </script>
+</body>
+</html>
