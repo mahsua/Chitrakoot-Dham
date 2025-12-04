@@ -1,0 +1,415 @@
+/* -------------------------------------------------
+   SHARED STYLES FOR ATTRACTION PAGES
+   Used by:
+   - ram-ghat.html
+   - kamadgiri.html
+   - gupt-godavari.html
+   - hanuman-dhara.html
+   - sati-anusuya.html
+   - ram-darshan.html
+-------------------------------------------------- */
+
+/* Section headings (only for inner pages, since main.css
+   is NOT loaded on index.html) */
+.section h2 {
+  color: #FF7A00;
+}
+
+/* -----------------------------
+   Breadcrumb + Language toggle
+------------------------------ */
+.breadcrumb-bar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+}
+
+.breadcrumb-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb-left a {
+  color: #0A8754;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lang-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.lang-btn {
+  border: none;
+  padding: 5px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.lang-btn.active {
+  background: linear-gradient(45deg, #FF3366, #FF7A00);
+  color: #fff;
+}
+
+.lang-btn.inactive {
+  background: #EEE;
+  color: #666;
+}
+
+/* -----------------------------
+   Intro grids (left text + right facts card)
+------------------------------ */
+.ram-intro-grid,
+.kam-intro-grid,
+.gupt-intro-grid,
+.han-intro-grid,
+.sati-intro-grid,
+.rd-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr);
+  gap: 32px;
+  margin-top: 10px;
+}
+
+/* Facts cards on right side */
+.ram-facts,
+.kam-facts,
+.gupt-facts,
+.han-facts,
+.sati-facts,
+.rd-facts {
+  background: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 18px 20px;
+}
+
+.ram-facts h3,
+.kam-facts h3,
+.gupt-facts h3,
+.han-facts h3,
+.sati-facts h3,
+.rd-facts h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #FF2E63;
+}
+
+.ram-facts ul,
+.kam-facts ul,
+.gupt-facts ul,
+.han-facts ul,
+.sati-facts ul,
+.rd-facts ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.ram-facts li::before,
+.kam-facts li::before,
+.gupt-facts li::before,
+.han-facts li::before,
+.sati-facts li::before,
+.rd-facts li::before {
+  content: "• ";
+  color: #0A8754;
+  font-weight: 700;
+}
+
+/* -----------------------------
+   Timeline / Legend blocks
+------------------------------ */
+.timeline {
+  border-left: 3px solid rgba(10, 135, 84, 0.22);
+  padding-left: 22px;
+  margin-top: 24px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 10px;
+}
+
+.timeline-bullet {
+  position: absolute;
+  left: -11px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #0A8754;
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  color: #FF7A00;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  margin-left: 10px;
+}
+
+/* -----------------------------
+   Experience cards (3-column responsive)
+------------------------------ */
+.experience-cards {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 18px;
+}
+
+.experience-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.experience-tag {
+  font-size: 0.75rem;
+  color: #FF7A00;
+  background: rgba(255, 122, 0, 0.12);
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+/* -----------------------------
+   Tips / Rules / Info boxes
+------------------------------ */
+.tips-box,
+.rules-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-top: 16px;
+}
+
+.tips-box h3,
+.rules-box h3 {
+  color: #FF2E63;
+  margin-bottom: 8px;
+}
+
+.tips-box ul,
+.rules-box ul {
+  padding-left: 18px;
+  line-height: 1.8;
+}
+
+/* -----------------------------
+   Visit grid + map (used on multiple pages)
+------------------------------ */
+.visit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.visit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.visit-map iframe {
+  width: 100%;
+  height: 280px;
+  border: 0;
+}
+
+.info-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.info-item .icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.visit-tip {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  background: #FFF5E9;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+/* -----------------------------
+   Closing quote / summary boxes
+------------------------------ */
+.ram-closing,
+.kam-closing,
+.gupt-closing,
+.han-closing,
+.sati-closing,
+.rd-closing {
+  background: #fff;
+  padding: 22px;
+  border-radius: 18px;
+  font-style: italic;
+  border-left: 4px solid #FF3366;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-top: 16px;
+}
+
+/* -----------------------------
+   Hero tweaks for inner pages
+   (hero base styles come from style.css)
+------------------------------ */
+
+.hero-inner.ram-hero,
+.hero-inner.kam-hero,
+.hero-inner.gupt-hero,
+.hero-inner.han-hero,
+.hero-inner.sati-hero,
+.hero-inner.rd-hero {
+  max-width: 780px;
+  text-align: left;
+}
+
+.hero-inner.ram-hero h1,
+.hero-inner.kam-hero h1,
+.hero-inner.gupt-hero h1,
+.hero-inner.han-hero h1,
+.hero-inner.sati-hero h1,
+.hero-inner.rd-hero h1 {
+  font-size: 2.2rem;
+}
+
+/* -----------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+  .ram-intro-grid,
+  .kam-intro-grid,
+  .gupt-intro-grid,
+  .han-intro-grid,
+  .sati-intro-grid,
+  .rd-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-inner.ram-hero,
+  .hero-inner.kam-hero,
+  .hero-inner.gupt-hero,
+  .hero-inner.han-hero,
+  .hero-inner.sati-hero,
+  .hero-inner.rd-hero {
+    text-align: center;
+  }
+
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.visit-map {
+  background: #fff;
+  padding: 12px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+
+/* ============================
+   FOOTER
+============================ */
+.site-footer {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 18px 16px;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center;  /* Center text lines */
+  gap: 6px;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-sep {
+  color: #6b7280;
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: #d1d5db;
+}
+
+.footer-meta a {
+  color: #f97316;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-meta a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.footer-icon {
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .footer-inner {
+    align-items: flex-start;
+  }
+}
+/* -------------------------------------------------
+   END OF FILE

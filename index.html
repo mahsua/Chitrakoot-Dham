@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chitrakoot Dham – Holy Land of Lord Rama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+        content="Discover Chitrakoot Dham – Ram Ghat, Kamadgiri, Gupt Godavari, Hanuman Dhara, Sati Anusuya Ashram, Sphatik Shila, Ram Darshan and Ganesh Bagh." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <!-- Brand -->
+    <a href="./index.html" class="brand">
+      <div class="brand-logo">ॐ</div>
+      <div class="brand-text">
+        <span class="brand-title">Chitrakoot Dham</span>
+        <span class="brand-subtitle">Where Divinity and Nature Meet</span>
+      </div>
+    </a>
+
+    <!-- Hamburger for mobile -->
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" onclick="toggleMenu()">
+      <span class="chevron"></span>
+    </button>
+
+    <!-- Main navigation (links + donate) -->
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#history">History</a>
+      <a href="#attractions">Attractions</a>
+      <a href="#plan-visit">Plan Visit</a>
+      <a href="pages/disclaimer.html">Disclaimer</a>
+      <a href="pages/donate.html" class="btn-nav">❤ Donate</a>
+    </nav>
+
+    <!-- Language toggle (stays OUTSIDE the hamburger menu) -->
+    <div class="lang-toggle">
+      <button class="lang-btn lang-en active" type="button" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn lang-hi" type="button" onclick="setLanguage('hi')">हिन्दी</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <h1 id="hero-title">Experience the Spiritual Aura of Chitrakoot</h1>
+        <p id="hero-text">
+          Chitrakoot Dham is the sacred land where Lord Rama, Goddess Sita and
+          Lord Lakshmana spent a major part of their exile. From peaceful river
+          ghats to mysterious caves, forest ashrams and sacred hills, every
+          corner here holds a living story from the Ramayana.
+        </p>
+        <a class="btn-hero" id="hero-btn" href="#attractions">Explore Main Attractions</a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <div class="split-card fade-in">
+          <div class="split-card-image">
+            <img src="./assets/images/about-chitrakoot.jpg" alt="Chitrakoot landscape">
+          </div>
+          <div class="split-card-content">
+            <h2 id="about-heading">About Chitrakoot Dham</h2>
+            <p id="about-text">
+              Chitrakoot lies in the Vindhya ranges on the border of Uttar Pradesh
+              and Madhya Pradesh. Mentioned in various scriptures, it is revered as
+              a land of penance, devotion and inner awakening. The serene Mandakini
+              River, sacred hills like Kamadgiri, natural caves and ancient
+              hermitages make it a powerful spiritual destination for pilgrims as
+              well as a peaceful retreat for travelers seeking calm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORY SECTION -->
+    <section class="section" id="history">
+      <div class="section-inner">
+        <div class="split-card fade-in">
+          <div class="split-card-image">
+            <img src="./assets/images/history-chitrakoot.jpg" alt="History of Chitrakoot">
+          </div>
+          <div class="split-card-content">
+            <h2 id="history-heading">History & Mythological Significance</h2>
+            <p id="history-text">
+              According to the Ramayana, Lord Rama spent a long portion of His
+              14-year exile in Chitrakoot. It was here that Bharat met Him at
+              Kamadgiri to request His return to Ayodhya. Saints like Goswami
+              Tulsidas later glorified Chitrakoot as a place where every stone and
+              stream echoes the name of Rama. Over time, temples, ghats and
+              ashrams developed around these sacred spots, preserving this living
+              heritage for generations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATTRACTIONS SECTION -->
+    <section class="section" id="attractions">
+      <div class="section-inner">
+        <h2 id="attractions-heading">Main Attractions</h2>
+        <p class="section-subtitle" id="attractions-subtitle">
+          From riverfront aartis to forest retreats, Chitrakoot offers a blend
+          of faith, nature and heritage.
+        </p>
+
+        <div class="cards-grid">
+
+          <!-- Ram Ghat -->
+          <article class="card fade-in">
+            <span class="badge">MUST VISIT</span>
+            <img src="./assets/images/ram-ghat.jpg" alt="Ram Ghat, Chitrakoot" />
+            <div class="card-content">
+              <h3 id="card-ram-title">Ram Ghat</h3>
+              <p id="card-ram-text">
+                The most vibrant spot on the banks of Mandakini River – famous
+                for evening aarti, colorful boats and peaceful river views.
+              </p>
+              <a class="btn" href="pages/ram-ghat.html">Explore</a>
+            </div>
+          </article>
+
+          <!-- Kamadgiri -->
+          <article class="card fade-in">
+            <img src="assets/images/kamadgiri.jpg" alt="Kamadgiri Hill" />
+            <div class="card-content">
+              <h3 id="card-kam-title">Kamadgiri</h3>
+              <p id="card-kam-text">
+                The wish-fulfilling hill considered the main deity of
+                Chitrakoot. Devotees perform a 5 km barefoot parikrama
+                around its base.
+              </p>
+              <a class="btn" href="pages/kamadgiri.html">Explore</a>
+            </div>
+          </article>
+
+          <!-- Gupt Godavari -->
+          <article class="card fade-in">
+            <img src="assets/images/gupt-godavari.jpg" alt="Gupt Godavari Caves" />
+            <div class="card-content">
+              <h3 id="card-gupt-title">Gupt Godavari</h3>
+              <p id="card-gupt-text">
+                A pair of natural caves, one dry and one filled with cool
+                knee-deep water. Legends say the Godavari River appeared here
+                secretly to glimpse Lord Rama.
+              </p>
+              <a class="btn" href="pages/gupt-godavari.html">Explore</a>
+            </div>
+          </article>
+
+          <!-- Hanuman Dhara -->
+          <article class="card fade-in">
+            <img src="assets/images/hanuman-dhara.jpg" alt="Hanuman Dhara" />
+            <div class="card-content">
+              <h3 id="card-han-title">Hanuman Dhara</h3>
+              <p id="card-han-text">
+                A hilltop shrine where a natural water stream falls over the
+                idol of Hanuman. Said to be created by Lord Rama to cool
+                Him after the burning of Lanka.
+              </p>
+              <a class="btn" href="pages/hanuman-dhara.html">Explore</a>
+            </div>
+          </article>
+
+          <!-- Sati Anusuya -->
+          <article class="card fade-in">
+            <img src="assets/images/sati-anusuya.jpg" alt="Sati Anusuya Ashram" />
+            <div class="card-content">
+              <h3 id="card-sati-title">Sati Anusuya Ashram</h3>
+              <p id="card-sati-text">
+                A quiet forest hermitage where Sage Atri and Sati Anusuya
+                lived. The Mandakini River is believed to originate from
+                this very area.
+              </p>
+              <a class="btn" href="pages/sati-anusuya.html">Explore</a>
+            </div>
+          </article>
+
+          <!-- Ram Darshan -->
+          <article class="card fade-in">
+            <img src="assets/images/ram-darshan.jpg" alt="Ram Darshan" />
+            <div class="card-content">
+              <h3 id="card-rd-title">Ram Darshan</h3>
+              <p id="card-rd-text">
+                A cultural complex that presents the life and ideals of
+                Lord Rama through exhibits, tableaux and informative displays.
+              </p>
+              <a class="btn" href="pages/ram-darshan.html">Explore</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FESTIVAL SECTION -->
+    <section class="section" id="festivals">
+      <div class="section-inner fade-in">
+        <h2 id="festival-heading">Festivals & Events in Chitrakoot</h2>
+        <p id="festival-subtitle">Major religious celebrations that attract thousands of devotees every year</p>
+
+        <div class="festival-grid">
+
+          <div class="festival-card">
+            <h3 id="fest-1-title">Ram Navami</h3>
+            <p id="fest-1-text">A grand celebration of the birth of Lord Rama — with processions & divine Aarti at Ram Ghat.</p>
+            <span class="fest-time" id="fest-1-time">March – April</span>
+          </div>
+
+          <div class="festival-card">
+            <h3 id="fest-2-title">Deepawali</h3>
+            <p id="fest-2-text">The ghats of Chitrakoot glow with lakhs of lamps — a sight closest to cosmic beauty.</p>
+            <span class="fest-time" id="fest-2-time">October – November</span>
+          </div>
+
+          <div class="festival-card">
+            <h3 id="fest-3-title">Makar Sankranti</h3>
+            <p id="fest-3-text">Holy dip in Mandakini & Parikrama around Kamadgiri begins early at sunrise.</p>
+            <span class="fest-time" id="fest-3-time">January 14</span>
+          </div>
+
+          <div class="festival-card">
+            <h3 id="fest-4-title">Amavasya Parikrama</h3>
+            <p id="fest-4-text">Lakhs of devotees walk barefoot around Kamadgiri — a divine experience every new moon.</p>
+            <span class="fest-time" id="fest-4-time">Every Month</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAN VISIT SECTION -->
+    <section class="section plan-visit" id="plan-visit">
+      <div class="section-inner">
+
+        <h2 id="plan-heading">Plan Your Visit</h2>
+
+        <div class="visit-grid fade-in">
+
+          <!-- Left Info -->
+          <div class="visit-info">
+            <div class="info-item">
+              <span class="icon">📍</span>
+              <div>
+                <h4 id="loc-heading">Location</h4>
+                <p id="loc-text">
+                  Chitrakoot Dham (Karwi), Uttar Pradesh & Satna District, Madhya Pradesh
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="icon">⏱️</span>
+              <div>
+                <h4 id="time-heading">Best Time To Visit</h4>
+                <p id="time-text">
+                  October to March (pleasant weather for Darshan & Parikrama)
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="icon">🙌</span>
+              <div>
+                <h4 id="fee-heading">Entry Fee</h4>
+                <p id="fee-text">
+                  Free for all pilgrims and visitors
+                </p>
+              </div>
+            </div>
+
+            <div class="visit-tip" id="tip-text">
+              “The best experience is during the Morning & Evening Aarti at Ram Ghat.”
+            </div>
+          </div>
+
+          <!-- Map Right Side -->
+          <div class="visit-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57775.817076157866!2d80.81641541056347!3d25.169863881945837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3984a635ac470c09%3A0xf77828392d478da7!2sChitrakoot%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1764733643928!5m2!1sen!2sin"
+              width="100%" height="300" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-links">
+        <a href="pages/disclaimer.html">
+          <span class="footer-icon">⚖️</span>
+          <span id="footer-disclaimer">Disclaimer</span>
+        </a>
+        <span class="footer-sep">|</span>
+        <a href="pages/donate.html">
+          <span class="footer-icon">💝</span>
+          <span id="footer-donate">Donate</span>
+        </a>
+      </div>
+
+      <div class="footer-meta">
+        <span class="footer-icon">💻</span>
+        <span id="footer-dev-text">
+          Developed by <a href="https://technology.mahsua.com" target="_blank" rel="noopener">Mahsua Technology</a>
+          with ❤️ from India (Free and Open-Source)
+        </span>
+      </div>
+
+      <div class="footer-copy">
+        <span id="footer-copy">© 2025 Chitrakoot Dham • Designed with devotion</span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script>
+    // MOBILE NAV TOGGLE
+    function toggleMenu() {
+      const nav = document.querySelector('.main-nav');
+      const menuBtn = document.querySelector('.menu-toggle');
+
+      nav.classList.toggle('open');
+      menuBtn.classList.toggle('open');
+    }
+
+    // Text translations
+    const translations = {
+      en: {
+        'hero-title': 'Experience the Spiritual Aura of Chitrakoot',
+        'hero-text': 'Chitrakoot Dham is the sacred land where Lord Rama, Goddess Sita and Lord Lakshmana spent a major part of their exile. From peaceful river ghats to mysterious caves, forest ashrams and sacred hills, every corner here holds a living story from the Ramayana.',
+        'hero-btn': 'Explore Main Attractions',
+
+        'about-heading': 'About Chitrakoot Dham',
+        'about-text': 'Chitrakoot lies in the Vindhya ranges on the border of Uttar Pradesh and Madhya Pradesh. Mentioned in various scriptures, it is revered as a land of penance, devotion and inner awakening. The serene Mandakini River, sacred hills like Kamadgiri, natural caves and ancient hermitages make it a powerful spiritual destination for pilgrims as well as a peaceful retreat for travelers seeking calm.',
+
+        'history-heading': 'History & Mythological Significance',
+        'history-text': 'According to the Ramayana, Lord Rama spent a long portion of His 14-year exile in Chitrakoot. It was here that Bharat met Him at Kamadgiri to request His return to Ayodhya. Saints like Goswami Tulsidas later glorified Chitrakoot as a place where every stone and stream echoes the name of Rama. Over time, temples, ghats and ashrams developed around these sacred spots, preserving this living heritage for generations.',
+
+        'attractions-heading': 'Main Attractions',
+        'attractions-subtitle': 'From riverfront aartis to forest retreats, Chitrakoot offers a blend of faith, nature and heritage.',
+
+        'card-ram-title': 'Ram Ghat',
+        'card-ram-text': 'The most vibrant spot on the banks of Mandakini River – famous for evening aarti, colorful boats and peaceful river views.',
+
+        'card-kam-title': 'Kamadgiri',
+        'card-kam-text': 'The wish-fulfilling hill considered the main deity of Chitrakoot. Devotees perform a 5 km barefoot parikrama around its base.',
+
+        'card-gupt-title': 'Gupt Godavari',
+        'card-gupt-text': 'A pair of natural caves, one dry and one filled with cool knee-deep water. Legends say the Godavari River appeared here secretly to glimpse Lord Rama.',
+
+        'card-han-title': 'Hanuman Dhara',
+        'card-han-text': 'A hilltop shrine where a natural water stream falls over the idol of Hanuman. Said to be created by Lord Rama to cool Him after the burning of Lanka.',
+
+        'card-sati-title': 'Sati Anusuya Ashram',
+        'card-sati-text': 'A quiet forest hermitage where Sage Atri and Sati Anusuya lived. The Mandakini River is believed to originate from this very area.',
+
+        'card-rd-title': 'Ram Darshan',
+        'card-rd-text': 'A cultural complex that presents the life and ideals of Lord Rama through exhibits, tableaux and informative displays.',
+
+        'plan-heading': 'Plan Your Visit',
+        'loc-heading': 'Location',
+        'loc-text': 'Chitrakoot Dham (Karwi), Uttar Pradesh & Satna District, Madhya Pradesh',
+        'time-heading': 'Best Time To Visit',
+        'time-text': 'October to March (pleasant weather for Darshan & Parikrama)',
+        'fee-heading': 'Entry Fee',
+        'fee-text': 'Free for all pilgrims and visitors',
+        'tip-text': '“The best experience is during the Morning & Evening Aarti at Ram Ghat.”',
+        // FESTIVALS
+        'festival-heading': 'Festivals & Events in Chitrakoot',
+        'festival-subtitle': 'Major religious celebrations that attract thousands of devotees every year',
+
+        'fest-1-title': 'Ram Navami',
+        'fest-1-text': 'A grand celebration of the birth of Lord Rama — with processions & divine Aarti at Ram Ghat.',
+        'fest-1-time': 'March – April',
+
+        'fest-2-title': 'Deepawali',
+        'fest-2-text': 'The ghats of Chitrakoot glow with lakhs of lamps — a sight closest to cosmic beauty.',
+        'fest-2-time': 'October – November',
+
+        'fest-3-title': 'Makar Sankranti',
+        'fest-3-text': 'Holy dip in Mandakini & Parikrama around Kamadgiri begins early at sunrise.',
+        'fest-3-time': 'January 14',
+
+        'fest-4-title': 'Amavasya Parikrama',
+        'fest-4-text': 'Lakhs of devotees walk barefoot around Kamadgiri — a divine experience every new moon.',
+        'fest-4-time': 'Every Month',
+        // FOOTER
+        'footer-disclaimer': 'Disclaimer',
+        'footer-donate': 'Donate',
+        'footer-dev-text': 'Developed by Mahsua Technology with ❤️ from India (Free and Open-Source)',
+        'footer-copy': '© 2025 Chitrakoot Dham • Designed with devotion'
+
+
+      },
+
+      hi: {
+        'hero-title': 'चित्रकूट की आध्यात्मिक आभा का अनुभव करें',
+        'hero-text': 'चित्रकूट धाम वह पावन भूमि है जहाँ भगवान श्रीराम, माता सीता और लक्ष्मण जी ने अपने वनवास का एक बड़ा हिस्सा व्यतीत किया। शांत नदी घाटों से लेकर रहस्यमयी गुफाओं, वन आश्रमों और पवित्र पहाड़ियों तक, यहाँ का हर कोना रामायण की जीवंत कहानी सुनाता है।',
+        'hero-btn': 'मुख्य स्थलों को देखें',
+
+        'about-heading': 'चित्रकूट धाम के बारे में',
+        'about-text': 'चित्रकूट, उत्तर प्रदेश और मध्य प्रदेश की सीमा पर विंध्याचल की पर्वतमाला में स्थित है। विभिन्न शास्त्रों में वर्णित यह स्थान तप, भक्ति और आंतरिक जागृति की भूमि माना जाता है। मंदाकिनी नदी, कामदगिरि जैसी पवित्र पहाड़ियाँ, प्राकृतिक गुफाएँ और प्राचीन आश्रम इसे श्रद्धालुओं के लिए एक शक्तिशाली आध्यात्मिक स्थल और यात्रियों के लिए एक शांतिदायक स्थान बनाते हैं।',
+
+        'history-heading': 'इतिहास और पौराणिक महत्व',
+        'history-text': 'रामायण के अनुसार, भगवान श्रीराम ने अपने 14 वर्ष के वनवास का एक लंबा समय चित्रकूट में बिताया। यहीं पर भरत जी कामदगिरि पर श्रीराम से मिलने आए थे, उन्हें अयोध्या लौटने के लिए निवेदन करने। गोस्वामी तुलसीदास जैसे संतों ने चित्रकूट की महिमा का विस्तार से वर्णन किया और इसे ऐसा स्थान बताया जहाँ पत्थर-पत्थर और जल की हर धारा “राम” नाम का जप करती है। समय के साथ यहाँ मंदिर, घाट और आश्रम विकसित हुए, जिन्होंने इस जीवंत विरासत को पीढ़ियों तक सँजोकर रखा है।',
+
+        'attractions-heading': 'मुख्य दर्शनीय स्थल',
+        'attractions-subtitle': 'नदी किनारे की आरतियों से लेकर वन आश्रमों तक, चित्रकूट आस्था, प्रकृति और विरासत का सुंदर संगम प्रस्तुत करता है।',
+
+        'card-ram-title': 'राम घाट',
+        'card-ram-text': 'मंदाकिनी नदी के किनारे स्थित चित्रकूट का सबसे जीवंत स्थल – जहाँ शाम की आरती, रंग-बिरंगी नावें और शांत नदी-दृश्य मन को मंत्रमुग्ध कर देते हैं।',
+
+        'card-kam-title': 'कामदगिरि',
+        'card-kam-text': 'इच्छा पूर्ण करने वाली यह पवित्र पहाड़ी चित्रकूट की मुख्य देवता मानी जाती है। श्रद्धालु इसकी परिक्रमा लगभग 5 किलोमीटर नंगे पाँव पैदल चलते हुए करते हैं।',
+
+        'card-gupt-title': 'गुप्त गोदावरी',
+        'card-gupt-text': 'प्राकृतिक गुफाओं की एक जोड़ी – एक सूखी और दूसरी ठंडे, घुटने तक पानी से भरी। मान्यता है कि गोदावरी नदी यहाँ गुप्त रूप से श्रीराम के दर्शन करने प्रकट हुई थी।',
+
+        'card-han-title': 'हनुमान धारा',
+        'card-han-text': 'पहाड़ी की चोटी पर स्थित यह मंदिर, जहाँ चट्टान से निकलती जलधारा सीधे हनुमान जी की मूर्ति पर गिरती है। माना जाता है कि लंका दहन के बाद उनके ताप को शांत करने हेतु यह धारा श्रीराम ने प्रकट की।',
+
+        'card-sati-title': 'सती अनुसूया आश्रम',
+        'card-sati-text': 'घने जंगलों के बीच स्थित यह शांत वन–आश्रम, जहाँ ऋषि अत्रि और सती अनुसूया का निवास माना जाता है। मंदाकिनी नदी का उद्गम क्षेत्र भी इसी क्षेत्र से जुड़ा माना जाता है।',
+
+        'card-rd-title': 'राम दर्शन',
+        'card-rd-text': 'एक सांस्कृतिक परिसर जहाँ रामायण की कथा को प्रदर्शनी, झाँकियों और जानकारीपूर्ण प्रदर्शन के माध्यम से जीवन–मूल्यों के साथ प्रस्तुत किया गया है।',
+
+        'plan-heading': 'यात्रा की योजना बनाएं',
+        'loc-heading': 'स्थान',
+        'loc-text': 'चित्रकूट धाम (करवी), उत्तर प्रदेश एवं सतना जिला, मध्य प्रदेश',
+        'time-heading': 'घूमने का सर्वोत्तम समय',
+        'time-text': 'अक्टूबर से मार्च (दर्शन और परिक्रमा के लिए सुहावना मौसम)',
+        'fee-heading': 'प्रवेश शुल्क',
+        'fee-text': 'सभी श्रद्धालुओं और पर्यटकों के लिए निःशुल्क',
+        'tip-text': '“सबसे सुंदर अनुभव राम घाट पर प्रातः और सायंकाल की आरती के समय मिलता है।”',
+        // FESTIVALS - HINDI
+        'festival-heading': 'चित्रकूट के प्रमुख पर्व और आयोजन',
+        'festival-subtitle': 'हर वर्ष लाखों श्रद्धालुओं को आकर्षित करने वाले पावन उत्सव',
+
+        'fest-1-title': 'राम नवमी',
+        'fest-1-text': 'श्रीराम जन्मोत्सव — राम घाट पर भव्य शोभायात्राएँ और दिव्य आरती होती है।',
+        'fest-1-time': 'मार्च – अप्रैल',
+
+        'fest-2-title': 'दीपावली',
+        'fest-2-text': 'चित्रकूट के घाट लाखों दीपों से जगमगा उठते हैं — अलौकिक सौंदर्य का दर्शन।',
+        'fest-2-time': 'अक्टूबर – नवंबर',
+
+        'fest-3-title': 'मकर संक्रान्ति',
+        'fest-3-text': 'मंदाकिनी में पवित्र स्नान और कामदगिरि परिक्रमा का शुभारंभ।',
+        'fest-3-time': '14 जनवरी',
+
+        'fest-4-title': 'अमावस्या परिक्रमा',
+        'fest-4-text': 'हर अमावस्या को लाखों श्रद्धालु नंगे पाँव कामदगिरि की परिक्रमा करते हैं।',
+        'fest-4-time': 'प्रत्येक माह',
+                // FOOTER - HINDI
+        'footer-disclaimer': 'अस्वीकरण',
+        'footer-donate': 'दान',
+        'footer-dev-text': '"महसुआ टेक्नोलॉजी" द्वारा बनाया गया भारत देश के प्यार में (निःशुल्क और मुक्त)',
+        'footer-copy': '© 2025 चित्रकूट धाम • श्रद्धा के साथ निर्मित'
+      }
+    };
+
+    function setLanguage(lang) {
+      const set = translations[lang];
+      if (!set) return;
+
+      Object.keys(set).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = set[id];
+      });
+
+      document.documentElement.lang = lang === 'hi' ? 'hi' : 'en';
+
+      document.querySelector('.lang-en').classList.toggle('active', lang === 'en');
+      document.querySelector('.lang-hi').classList.toggle('active', lang === 'hi');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // default to English
+      setLanguage('en');
+
+      // Fade-in on scroll
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
