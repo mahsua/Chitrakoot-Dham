@@ -1,383 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Support This Chitrakoot Dham Website – Donate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-        content="Support this free, open-source Chitrakoot Dham information website maintained by Mahsua Technology. Your donation helps cover server costs and future spiritual projects." />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us | Mahsua Technology Initiative</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@300;400;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style>
-    .donate-shell {
-      max-width: 1000px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
-      overflow: hidden;
-      border: 1px solid rgba(255,122,0,0.18);
-    }
-
-    .donate-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-    }
-
-    .donate-text {
-      padding: 28px 26px;
-      background: radial-gradient(circle at top left, #FFF7ED 0, #FFFFFF 55%, #FFF5F7 100%);
-    }
-
-    .donate-tag {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.75rem;
-      color: #FF7A00;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .donate-title {
-      font-size: 1.6rem;
-      margin-bottom: 12px;
-      color: #111827;
-    }
-
-    .donate-text p {
-      font-size: 0.96rem;
-      color: #4B5563;
-      line-height: 1.7;
-      margin-bottom: 10px;
-    }
-
-    .donate-highlight {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      margin-top: 10px;
-      background: #FEF3C7;
-      border-radius: 12px;
-      border: 1px solid #FBBF24;
-      font-size: 0.9rem;
-      color: #92400E;
-      font-weight: 500;
-    }
-
-    .donate-highlight-icon {
-      font-size: 1.3rem;
-    }
-
-    .donate-qr-side {
-      position: relative;
-      background: linear-gradient(135deg,#FF7A00,#FF3366);
-      padding: 26px 20px;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .donate-qr-side::before,
-    .donate-qr-side::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      z-index: 0;
-    }
-
-    .donate-qr-side::before {
-      width: 180px;
-      height: 180px;
-      top: -50px;
-      right: -40px;
-    }
-    .donate-qr-side::after {
-      width: 200px;
-      height: 200px;
-      bottom: -60px;
-      left: -60px;
-    }
-
-    .donate-qr-card {
-      position: relative;
-      z-index: 1;
-      background:#ffffff;
-      border-radius: 18px;
-      padding: 14px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-      margin-bottom: 14px;
-      transform: translateY(0);
-      transition: transform .25s ease;
-    }
-
-    .donate-qr-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .donate-qr-card img {
-      width: 230px;
-      height: 230px;
-      object-fit: contain;
-      border-radius: 12px;
-      display:block;
-    }
-
-    .donate-qr-side h2 {
-      position: relative;
-      z-index: 1;
-      font-size: 1.4rem;
-      margin-bottom: 4px;
-    }
-
-    .donate-qr-side p {
-      position: relative;
-      z-index: 1;
-      font-size: 0.96rem;
-      margin-bottom: 10px;
-      color: #FFE4CF;
-    }
-
-    .donate-note {
-      position: relative;
-      z-index: 1;
-      font-size: 0.8rem;
-      text-align: center;
-      max-width: 260px;
-      color: #FFE4CF;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 900px) {
-      .donate-layout {
-        grid-template-columns: 1fr;
-      }
-      .donate-text {
-        padding: 22px 18px;
-      }
-      .donate-qr-side {
-        padding: 22px 18px 24px;
-      }
-    }
-  </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mahsua-pink': '#ec4899', // Pink for accents
+                        'mahsua-blue': '#3b82f6', // Blue for trust/headings
+                        'park-green': '#10b981',  // Green for nature/success
+                        'light-gray': '#f8fafc'   // Light gray background
+                    },
+                    fontFamily: {
+                        'serif': ['Merriweather', 'serif'],
+                        'sans': ['Lato', 'sans-serif'],
+                        'hindi': ['Noto Sans Devanagari', 'sans-serif'] 
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-light-gray flex flex-col min-h-screen font-sans">
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-12 flex items-center justify-center">
+        <div class="w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            <div class="md:flex">
+                <!-- Left Side: Text Content -->
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    
+                    <!-- Language Toggle Button (Moved Here) -->
+                    <div class="mb-6">
+                        <button onclick="toggleLanguage()" class="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition border border-gray-200 shadow-sm">
+                            <i class="fas fa-language text-mahsua-pink text-lg"></i>
+                            <span id="lang-btn-text">हिंदी में देखें</span>
+                        </button>
+                    </div>
 
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <!-- Brand -->
-    <a href="../index.html" class="brand">
-      <div class="brand-logo">ॐ</div>
-      <div class="brand-text">
-        <span class="brand-title">Chitrakoot Dham</span>
-        <span class="brand-subtitle">Where Divinity and Nature Meet</span>
-      </div>
-    </a>
+                    <div class="uppercase tracking-wide text-xs text-mahsua-pink font-bold mb-2" id="brand-label">Mahsua Technology Initiative</div>
+                    <h1 class="font-serif text-3xl md:text-4xl font-bold text-mahsua-blue mb-6" id="main-heading">Support This Digital Initiative</h1>
+                    
+                    <p class="text-gray-600 mb-4 text-lg leading-relaxed" id="intro-text">
+                        Hello! I am <strong>Shivam Kushwaha</strong>, Founder of Mahsua Technology.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed" id="mission-text">
+                        This website has been developed by us as a <strong>Free Public Service</strong>. Our mission is to make technology simple, affordable, and accessible for everyone in our community.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed" id="support-text">
+                        If you appreciate this effort to provide free digital resources, you can voluntarily support us. Your contribution helps cover server costs and fuels future public welfare digital projects.
+                    </p>
+                    
+                    <div class="flex items-center text-gray-700 font-medium p-4 bg-blue-50 rounded-lg border border-blue-100">
+                        <i class="fas fa-heart text-2xl mr-4 text-mahsua-pink"></i>
+                        <div>
+                            <span class="block text-xs text-gray-500 uppercase font-bold" id="contribution-label">Contribution</span>
+                            <span class="text-lg text-gray-800" id="contribution-sub">100% Voluntary & Secure</span>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Hamburger for mobile -->
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation" onclick="toggleMenu()">
-      <span class="chevron"></span>
-    </button>
+                <!-- Right Side: Quick Donation Plans -->
+                <div class="md:w-1/2 bg-gradient-to-br from-mahsua-pink to-mahsua-blue p-8 md:p-12 flex flex-col justify-center relative">
+                    <!-- Decorative Circles -->
+                    <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white opacity-10 rounded-full"></div>
+                    <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-white opacity-10 rounded-full"></div>
 
-    <!-- Main navigation -->
-    <nav class="main-nav">
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#history">History</a>
-      <a href="../index.html#attractions">Attractions</a>
-      <a href="../index.html#plan-visit">Plan Visit</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="donate.html" class="btn-nav">❤ Donate</a>
-    </nav>
+                    <div class="relative z-10 text-center mb-6">
+                        <h2 class="font-serif text-2xl font-bold text-white" id="plan-heading">Choose Support Amount</h2>
+                        <p class="text-blue-100 text-sm" id="plan-sub">Tap a card to pay via UPI</p>
+                    </div>
 
-    <!-- Language toggle -->
-    <div class="lang-toggle">
-      <button class="lang-btn lang-en active" type="button" onclick="setLanguage('en')">EN</button>
-      <button class="lang-btn lang-hi inactive" type="button" onclick="setLanguage('hi')">हिन्दी</button>
-    </div>
-  </header>
+                    <div class="relative z-10 space-y-4">
+                        
+                        <!-- Plan 1: Basic -->
+                        <a href="upi://pay?pa=9752107808-1@okbizaxis&pn=Mahsua%20Technology&am=50&cu=INR" class="group flex items-center justify-between bg-white/90 hover:bg-white rounded-xl shadow-lg p-4 cursor-pointer transition duration-200 transform hover:-translate-y-1">
+                            <div class="flex items-center">
+                                <div class="bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center text-gray-500 group-hover:text-mahsua-pink group-hover:bg-pink-50 transition">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <div class="ml-4 text-left">
+                                    <h3 class="font-bold text-gray-800" id="plan1-title">Basic Support</h3>
+                                    <p class="text-xs text-gray-500" id="plan1-desc">Coffee for the developer</p>
+                                </div>
+                            </div>
+                            <div class="text-xl font-bold text-mahsua-blue">₹50</div>
+                        </a>
 
-  <!-- BREADCRUMB -->
-  <div class="breadcrumb-bar">
-    <div class="breadcrumb-inner">
-      <div class="breadcrumb-left">
-        <a href="../index.html" id="crumb-home">Home</a>
-        <span>›</span>
-        <span id="crumb-page">Donate</span>
-      </div>
-    </div>
-  </div>
+                        <!-- Plan 2: Regular (Highlighted) -->
+                        <a href="upi://pay?pa=9752107808-1@okbizaxis&pn=Mahsua%20Technology&am=100&cu=INR" class="group flex items-center justify-between bg-white rounded-xl shadow-xl border-l-4 border-mahsua-blue p-5 cursor-pointer transition duration-200 transform hover:scale-105 relative">
+                            <div class="absolute -top-3 right-4 bg-mahsua-blue text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider" id="tag-popular">Popular</div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-50 rounded-full w-12 h-12 flex items-center justify-center text-mahsua-blue">
+                                    <i class="fas fa-thumbs-up text-lg"></i>
+                                </div>
+                                <div class="ml-4 text-left">
+                                    <h3 class="font-bold text-gray-900 text-lg" id="plan2-title">Regular Support</h3>
+                                    <p class="text-xs text-gray-500" id="plan2-desc">Helps keep servers running</p>
+                                </div>
+                            </div>
+                            <div class="text-2xl font-bold text-mahsua-blue">₹100</div>
+                        </a>
 
-  <main>
-    <section class="section">
-      <div class="section-inner">
-        <h2 id="donate-heading">Support This Free Chitrakoot Dham Website</h2>
+                        <!-- Plan 3: Premium -->
+                        <a href="upi://pay?pa=9752107808-1@okbizaxis&pn=Mahsua%20Technology&am=500&cu=INR" class="group flex items-center justify-between bg-white/90 hover:bg-white rounded-xl shadow-lg p-4 cursor-pointer transition duration-200 transform hover:-translate-y-1">
+                            <div class="flex items-center">
+                                <div class="bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center text-gray-500 group-hover:text-park-green group-hover:bg-green-50 transition">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div class="ml-4 text-left">
+                                    <h3 class="font-bold text-gray-800" id="plan3-title">Premium Support</h3>
+                                    <p class="text-xs text-gray-500" id="plan3-desc">Fuel future projects</p>
+                                </div>
+                            </div>
+                            <div class="text-xl font-bold text-mahsua-blue">₹500</div>
+                        </a>
 
-        <div class="donate-shell fade-in">
-          <div class="donate-layout">
-
-            <!-- LEFT: TEXT -->
-            <div class="donate-text">
-              <div class="donate-tag" id="donate-tag">Mahsua Technology Initiative</div>
-              <h3 class="donate-title" id="donate-title">
-                Help Us Keep This Sacred Guide Free for Everyone
-              </h3>
-
-              <p id="donate-p1">
-                Namaste! I am <strong>Shivam Kushwaha</strong>, Founder of Mahsua Technology.
-              </p>
-              <p id="donate-p2">
-                This Chitrakoot Dham website is developed by us as a <strong>free public service</strong>,
-                so that pilgrims and travelers can easily get authentic information about Ram Ghat, Kamadgiri,
-                Gupt Godavari, Hanuman Dhara, Sati Anusuya Ashram and other sacred places.
-              </p>
-              <p id="donate-p3">
-                If this effort has helped you in any way, you can support us with a voluntary contribution.
-                Your support will help us maintain servers, improve content and build more such spiritual and
-                social projects in the future.
-              </p>
-
-              <div class="donate-highlight">
-                <span class="donate-highlight-icon">✅</span>
-                <span id="donate-highlight-text">
-                  Secure, direct support via UPI / QR Code. No extra gateway charges.
-                </span>
-              </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- RIGHT: QR -->
-            <div class="donate-qr-side">
-              <div class="donate-qr-card">
-                <img src="../assets/images/g-pay.jpg"
-                     alt="Donate to Mahsua Technology via UPI QR"
-                     onerror="this.src='https://placehold.co/300x300/ffffff/000000?text=Scan+QR+Code';" />
-              </div>
-              <h2 id="donate-qr-heading">Scan & Support</h2>
-              <p id="donate-qr-subtext">Mahsua Technology · Chitrakoot Digital Seva</p>
-
-              <div class="donate-note" id="donate-note">
-                Your contribution will be used mainly for server costs, domain renewals and building
-                more free, open-source digital projects for temples, villages and students.
-              </div>
-            </div>
-
-          </div>
         </div>
-      </div>
-    </section>
-  </main>
+    </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
+    <!-- Translation Script -->
+    <script>
+        // Content Dictionary
+        const content = {
+            en: {
+                btnText: "हिंदी में देखें",
+                navBack: "Back to Home",
+                navTagline: "Mahsua Digital Initiative",
+                brandLabel: "Mahsua Technology Initiative",
+                mainHeading: "Support This Digital Initiative",
+                introText: "Hello! I am <strong>Shivam Kushwaha</strong>, Founder of Mahsua Technology.",
+                missionText: "This website has been developed by us as a <strong>Free Public Service</strong>. Our mission is to make technology simple, affordable, and accessible for everyone in our community.",
+                supportText: "If you appreciate this effort to provide free digital resources, you can voluntarily support us. Your contribution helps cover server costs and fuels future public welfare digital projects.",
+                contribLabel: "Contribution",
+                contribSub: "100% Voluntary & Secure",
+                planHeading: "Choose Support Amount",
+                planSub: "Tap a card to pay via UPI",
+                plan1Title: "Basic Support",
+                plan1Desc: "Coffee for the developer",
+                plan2Title: "Regular Support",
+                plan2Desc: "Helps keep servers running",
+                plan3Title: "Premium Support",
+                plan3Desc: "Fuel future projects",
+                tagPopular: "Popular",
+                footerCopy: "&copy; 2025 Mahsua Digital Initiative. All rights reserved.",
+                footerDesign: "Design and Developed by",
+                footerContact: "Contact at",
+                footerNeed: "Need website for your Organization?",
+                footerClick: "Click here"
+            },
+            hi: {
+                btnText: "View in English",
+                navBack: "मुख्य पृष्ठ पर वापस जाएं",
+                navTagline: "महसुआ डिजिटल पहल",
+                brandLabel: "महसुआ टेक्नोलॉजी पहल",
+                mainHeading: "इस डिजिटल पहल का समर्थन करें",
+                introText: "नमस्ते! मैं <strong>शिवम कुशवाहा</strong> हूँ, महसुआ टेक्नोलॉजी का संस्थापक।",
+                missionText: "यह वेबसाइट हमारे द्वारा एक <strong>मुफ्त सार्वजनिक सेवा</strong> के रूप में विकसित की गई है। हमारा मिशन तकनीक को समुदाय में सभी के लिए सरल, किफायती और सुलभ बनाना है।",
+                supportText: "यदि आप मुफ्त डिजिटल संसाधन प्रदान करने के इस प्रयास की सराहना करते हैं, तो आप स्वेच्छा से हमारा समर्थन कर सकते हैं। आपका योगदान सर्वर लागत को कवर करने और भविष्य की जनकल्याणकारी परियोजनाओं को बढ़ावा देने में मदद करता है।",
+                contribLabel: "योगदान",
+                contribSub: "100% स्वैच्छिक और सुरक्षित",
+                planHeading: "सहयोग राशि चुनें",
+                planSub: "UPI भुगतान के लिए कार्ड पर टैप करें",
+                plan1Title: "बुनियादी सहयोग",
+                plan1Desc: "डेवलपर के लिए कॉफी",
+                plan2Title: "नियमित सहयोग",
+                plan2Desc: "सर्वर को चालू रखने में मदद करता है",
+                plan3Title: "प्रीमियम सहयोग",
+                plan3Desc: "भविष्य की परियोजनाओं को बढ़ावा दें",
+                tagPopular: "लोकप्रिय",
+                footerCopy: "&copy; 2025 महसुआ डिजिटल पहल। सर्वाधिकार सुरक्षित।",
+                footerDesign: "डिज़ाइन और विकसित करता:",
+                footerContact: "संपर्क करें:",
+                footerNeed: "क्या आपको अपनी संस्था के लिए वेबसाइट चाहिए?",
+                footerClick: "यहाँ क्लिक करें"
+            }
+        };
 
-      <div class="footer-links">
-        <a href="disclaimer.html">
-          <span class="footer-icon">⚖️</span>
-          <span id="footer-disclaimer">Disclaimer</span>
-        </a>
-        <span class="footer-sep">|</span>
-        <a href="donate.html">
-          <span class="footer-icon">💝</span>
-          <span id="footer-donate">Donate</span>
-        </a>
-      </div>
+        // State
+        let currentLang = 'en';
 
-      <div class="footer-meta">
-        <span class="footer-icon">💻</span>
-        <span id="footer-dev-text">
-          Developed by <a href="https://technology.mahsua.com" target="_blank" rel="noopener">Mahsua Technology</a>
-          with ❤️ from India (Free and Open-Source)
-        </span>
-      </div>
+        function toggleLanguage() {
+            // Switch Language
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            const data = content[currentLang];
 
-      <div class="footer-copy">
-        <span id="footer-copy">© 2025 Chitrakoot Dham • Designed with devotion</span>
-      </div>
+            // Apply Font
+            if (currentLang === 'hi') {
+                document.body.classList.add('font-hindi');
+                document.body.classList.remove('font-sans');
+            } else {
+                document.body.classList.add('font-sans');
+                document.body.classList.remove('font-hindi');
+            }
 
-    </div>
-  </footer>
+            // Update Text content
+            document.getElementById('lang-btn-text').innerText = data.btnText;
+            document.getElementById('nav-back').innerText = data.navBack;
+            document.getElementById('nav-tagline').innerText = data.navTagline;
+            document.getElementById('brand-label').innerText = data.brandLabel;
+            document.getElementById('main-heading').innerText = data.mainHeading;
+            document.getElementById('intro-text').innerHTML = data.introText;
+            document.getElementById('mission-text').innerHTML = data.missionText;
+            document.getElementById('support-text').innerText = data.supportText;
+            document.getElementById('contribution-label').innerText = data.contribLabel;
+            document.getElementById('contribution-sub').innerText = data.contribSub;
+            document.getElementById('plan-heading').innerText = data.planHeading;
+            document.getElementById('plan-sub').innerText = data.planSub;
+            
+            document.getElementById('plan1-title').innerText = data.plan1Title;
+            document.getElementById('plan1-desc').innerText = data.plan1Desc;
+            
+            document.getElementById('plan2-title').innerText = data.plan2Title;
+            document.getElementById('plan2-desc').innerText = data.plan2Desc;
+            document.getElementById('tag-popular').innerText = data.tagPopular;
+            
+            document.getElementById('plan3-title').innerText = data.plan3Title;
+            document.getElementById('plan3-desc').innerText = data.plan3Desc;
+            
+            document.getElementById('footer-copy').innerHTML = data.footerCopy;
+            document.getElementById('footer-design').innerText = data.footerDesign;
+            document.getElementById('footer-contact').innerText = data.footerContact;
+            document.getElementById('footer-need').innerText = data.footerNeed;
+            document.getElementById('footer-click').innerText = data.footerClick;
+        }
+    </script>
 
-  <script>
-    // MOBILE NAV TOGGLE
-    function toggleMenu() {
-      const nav = document.querySelector('.main-nav');
-      const menuBtn = document.querySelector('.menu-toggle');
-
-      nav.classList.toggle('open');
-      menuBtn.classList.toggle('open');
-    }
-
-    const translations = {
-      en: {
-        'crumb-home': 'Home',
-        'crumb-page': 'Donate',
-
-        'donate-heading': 'Support This Free Chitrakoot Dham Website',
-        'donate-tag': 'Mahsua Technology Initiative',
-        'donate-title': 'Help Us Keep This Sacred Guide Free for Everyone',
-        'donate-p1': 'Namaste! I am Shivam Kushwaha, Founder of Mahsua Technology.',
-        'donate-p2': 'This Chitrakoot Dham website is developed by us as a free public service, so that pilgrims and travelers can easily get authentic information about Ram Ghat, Kamadgiri, Gupt Godavari, Hanuman Dhara, Sati Anusuya Ashram and other sacred places.',
-        'donate-p3': 'If this effort has helped you in any way, you can support us with a voluntary contribution. Your support will help us maintain servers, improve content and build more such spiritual and social projects in the future.',
-        'donate-highlight-text': 'Secure, direct support via UPI / QR Code. No extra gateway charges.',
-        'donate-qr-heading': 'Scan & Support',
-        'donate-qr-subtext': 'Mahsua Technology · Chitrakoot Digital Seva',
-        'donate-note': 'Your contribution will be used mainly for server costs, domain renewals and building more free, open-source digital projects for temples, villages and students.',
-
-        // FOOTER
-        'footer-disclaimer': 'Disclaimer',
-        'footer-donate': 'Donate',
-        'footer-dev-text': 'Developed by Mahsua Technology with ❤️ from India (Free and Open-Source)',
-        'footer-copy': '© 2025 Chitrakoot Dham • Designed with devotion'
-      },
-
-      hi: {
-        'crumb-home': 'मुखपृष्ठ',
-        'crumb-page': 'सहयोग करें',
-
-        'donate-heading': 'इस निःशुल्क चित्रकूट धाम वेबसाइट का सहयोग करें',
-        'donate-tag': 'Mahsua Technology Initiative',
-        'donate-title': 'आइए, इस पावन डिजिटल गाइड को सभी के लिए निःशुल्क बनाए रखें',
-        'donate-p1': 'नमस्कार! मैं <strong>शिवम कुशवाहा</strong> हूँ, Mahsua Technology का संस्थापक।',
-        'donate-p2': 'यह चित्रकूट धाम वेबसाइट हमने एक <strong>मुफ़्त सार्वजनिक सेवा</strong> के रूप में विकसित की है, ताकि श्रद्धालुओं और यात्रियों को राम घाट, कामदगिरि, गुप्त गोदावरी, हनुमान धारा, सती अनुसूया आश्रम और अन्य पावन स्थलों की सही और सरल जानकारी मिल सके।',
-        'donate-p3': 'यदि यह प्रयास आपको किसी भी रूप में उपयोगी लगा हो, तो आप स्वेच्छा से हमें सहयोग राशि दे सकते हैं। आपका छोटा–सा सहयोग सर्वर ख़र्च, डोमेन नवीनीकरण और भविष्य के ऐसे ही आध्यात्मिक व सामाजिक डिजिटल प्रोजेक्ट्स के विकास में बहुत सहायक होगा।',
-        'donate-highlight-text': 'UPI / QR कोड के माध्यम से सुरक्षित और सीधा सहयोग – किसी अतिरिक्त शुल्क के बिना।',
-        'donate-qr-heading': 'स्कैन करें और सहयोग दें',
-        'donate-qr-subtext': 'Mahsua Technology · Chitrakoot Digital Seva',
-        'donate-note': 'आपके सहयोग का उपयोग मुख्य रूप से सर्वर लागत, डोमेन नवीनीकरण और मंदिरों, गाँवों व विद्यार्थियों के लिए नए निःशुल्क, मुक्त स्रोत डिजिटल प्रोजेक्ट्स बनाने में किया जाएगा।',
-
-        // FOOTER - HINDI
-        'footer-disclaimer': 'अस्वीकरण',
-        'footer-donate': 'दान',
-        'footer-dev-text': 'विकसित: Mahsua Technology द्वारा, भारत से ❤️ (निःशुल्क और मुक्त स्रोत)',
-        'footer-copy': '© 2025 चित्रकूट धाम • श्रद्धा के साथ निर्मित'
-      }
-    };
-
-    function setLanguage(lang) {
-      const set = translations[lang];
-      if (!set) return;
-
-      Object.keys(set).forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = set[id]; // use innerHTML to allow <strong> in Hindi text
-      });
-
-      document.documentElement.lang = (lang === 'hi') ? 'hi' : 'en';
-
-      document.querySelector('.lang-en').classList.toggle('active', lang === 'en');
-      document.querySelector('.lang-en').classList.toggle('inactive', lang !== 'en');
-      document.querySelector('.lang-hi').classList.toggle('active', lang === 'hi');
-      document.querySelector('.lang-hi').classList.toggle('inactive', lang !== 'en');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      setLanguage('en');
-    });
-  </script>
 </body>
 </html>
